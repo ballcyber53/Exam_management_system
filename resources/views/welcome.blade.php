@@ -107,21 +107,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-                <p>This is a nice </p> <p>I like </p>
-                <ul>
-                <li>List item 1</li>
-                <li>List item 2</li>
-                <li>List item 3</li>
-                </ul>
-                <button id="btn-1">Append text</button>
-                <button id="btn-2">Append list item</button>
-
-                <script>
-                        $("#btn-1").click(function(){ $("p").append(" <b>Book</b>.");
-                    }); $("#btn-2").click(function(){
-                    $("ul").append("<li>Appended list item</li>"); });
-                    });
-                </script>
+                
 
 
             </div>
