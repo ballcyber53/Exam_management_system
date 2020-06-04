@@ -20,7 +20,7 @@ class UserController extends Controller
      */
     public function index()
     {
-        
+
 
         $users = User::orderBy('faculty_id', 'asc')
                         ->where('usertype','user' )
@@ -208,61 +208,5 @@ class UserController extends Controller
     }
 
 
-    function action(Request $request)
-    {
-     if($request->ajax())
-     {
-      $output = '';
-      $query = $request->get('query');
-      if($query != '')
-      {
-       $data = DB::table('users')
-         ->where('name', 'like', '%'.$query.'%')
-         ->orWhere('address', 'like', '%'.$query.'%')
-         ->orWhere('email', 'like', '%'.$query.'%')
-         ->orWhere('phone', 'like', '%'.$query.'%')
-         ->orWhere('school', 'like', '%'.$query.'%')
-         ->orWhere('education_background', 'like', '%'.$query.'%')
-         ->orderBy('major_id', 'desc')
-         ->get();
-
-      }
-      else
-      {
-       $data = DB::table('tbl_customer')
-         ->orderBy('CustomerID', 'desc')
-         ->get();
-      }
-      $total_row = $data->count();
-      if($total_row > 0)
-      {
-       foreach($data as $row)
-       {
-        $output .= '
-        <tr>
-         <td>'.$row->CustomerName.'</td>
-         <td>'.$row->Address.'</td>
-         <td>'.$row->City.'</td>
-         <td>'.$row->PostalCode.'</td>
-         <td>'.$row->Country.'</td>
-        </tr>
-        ';
-       }
-      }
-      else
-      {
-       $output = '
-       <tr>
-        <td align="center" colspan="5">No Data Found</td>
-       </tr>
-       ';
-      }
-      $data = array(
-       'table_data'  => $output,
-       'total_data'  => $total_row
-      );
-
-      echo json_encode($data);
-     }
-    }
+  
 }

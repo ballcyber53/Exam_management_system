@@ -16,10 +16,6 @@ class CreateFacultiesTable extends Migration
         Schema::create('faculties', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            // $table->unsignedBigInteger('user_id');
-            // $table->foreign('user_id')->references('id')->on('users');
-            // $table->unsignedBigInteger('major_id');
-            // $table->foreign('major_id')->references('id')->on('majors');
             $table->timestamps();
         });
     }

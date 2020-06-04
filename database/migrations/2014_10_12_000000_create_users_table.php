@@ -13,7 +13,7 @@ class CreateUsersTable extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('users ', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('usertype')->default('user');
@@ -24,13 +24,19 @@ class CreateUsersTable extends Migration
             $table->string('school');
             $table->string('education_background');
             $table->unsignedBigInteger('faculty_id');
-            $table->foreign('faculty_id')->references('id')->on('faculties');
+            $table->foreign('faculty_id')->references('id')->on('faculties')->onDelete('cascade');
             $table->unsignedBigInteger('major_id');
-            $table->foreign('major_id')->references('id')->on('majors');
+            $table->foreign('major_id')->references('id')->on('majors')->onDelete('cascade');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
+
+
+
+
+
         });
+
     }
 
     /**
@@ -41,5 +47,6 @@ class CreateUsersTable extends Migration
     public function down()
     {
         Schema::dropIfExists('users');
+
     }
 }
