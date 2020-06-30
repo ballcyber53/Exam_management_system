@@ -19,9 +19,12 @@ class CreateMajorsTable extends Migration
             $table->string('route_map');
             // $table->unsignedBigInteger('user_id');
             // $table->foreign('user_id')->references('id')->on('users');
+            $table->timestamps();
+        });
+
+        Schema::table('majors', function (Blueprint $table) {
             $table->unsignedBigInteger('faculty_id');
             $table->foreign('faculty_id')->references('id')->on('faculties')->onDelete('cascade');
-            $table->timestamps();
         });
     }
 
