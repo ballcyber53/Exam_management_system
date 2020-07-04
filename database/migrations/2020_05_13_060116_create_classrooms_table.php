@@ -17,9 +17,8 @@ class CreateClassroomsTable extends Migration
             $table->bigIncrements('id');
             $table->string('classroom_no')->nullable();
             $table->integer('max_seat')->nullable();
-            $table->unsignedInteger('major_id')->nullable();
-            // $table->unsignedBigInteger('major_id');
-            // $table->foreign('major_id')->references('id')->on('majors');
+            $table->unsignedBigInteger('major_id')->nullable();
+            $table->foreign('major_id')->references('id')->on('majors');
 
             $table->timestamps();
         });
