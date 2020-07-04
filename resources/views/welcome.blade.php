@@ -95,7 +95,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Exam Management Systems
+                    Exam Management Systems Test Deploy
                 </div>
 
                 <div class="links">
@@ -107,7 +107,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
-                
+
 
 
             </div>
