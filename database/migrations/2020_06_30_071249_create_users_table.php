@@ -23,10 +23,12 @@ class CreateUsersTable extends Migration
             $table->string('phone')->nullable();
             $table->string('school')->nullable();
             $table->string('education_background');
-            $table->unsignedBigInteger('faculty_id')->nullable();
-            $table->foreign('faculty_id')->references('id')->on('faculties');
-            $table->unsignedBigInteger('major_id')->nullable();
-            $table->foreign('major_id')->references('id')->on('majors');
+            $table->unsignedInteger('faculty_id')->nullable();
+            $table->unsignedInteger('major_id')->nullable();
+            // $table->unsignedBigInteger('faculty_id')->nullable();
+            // $table->foreign('faculty_id')->references('id')->on('faculties');
+            // $table->unsignedBigInteger('major_id')->nullable();
+            // $table->foreign('major_id')->references('id')->on('majors');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
