@@ -15,7 +15,7 @@ class CreateClassroomsTable extends Migration
     {
         Schema::create('classrooms', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('classroom_no')->unique();
+            $table->string('classroom_no')->nullable();
             $table->integer('max_seat')->nullable();
             $table->unsignedBigInteger('major_id');
             $table->foreign('major_id')->references('id')->on('majors');
