@@ -95,7 +95,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Exam Management Systems Test Deploy
+                    Exam Management Systems
                 </div>
 
                 <div class="links">
