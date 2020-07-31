@@ -89,19 +89,19 @@
                             <div class="col-md-6">
                             <select name="faculty_id" id="faculty_id" class="form-control @error('faculty_id') is-invalid @enderror" value="{{ old('faculty_id') }}" required autocomplete="faculty_id" autofocus>
                                 <option><p>กรุณาเลือกคณะที่ต้องการ</p></option>
-                                @foreach ($faculties as $faculty)
+                                {{-- @foreach ($faculties as $faculty)
 
                                         <option value="{{$faculty->id}}">{{$faculty->name}}</option>
 
 
-                                @endforeach
+                                @endforeach --}}
 
-                                {{-- <option value="1">คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</option>
+                                <option value="1">คณะครุศาสตร์อุตสาหกรรมและเทคโนโลยี</option>
                                 <option value="2">คณะบริหารธุรกิจ</option>
                                 <option value="3">คณะวิศวกรรมศาสตร์</option>
                                 <option value="4">คณะศิลปศาสตร์</option>
                                 <option value="5">คณะสถาปัตยกรรมศาสตร์</option>
-                                <option value="6">วิทยาลัยรัตภูมิ</option> --}}
+                                <option value="6">วิทยาลัยรัตภูมิ</option>
 
                             </select>
                                 @error('faculty_id')
@@ -118,11 +118,30 @@
                             <div class="col-md-6">
                             <select name="major_id" id="major_id" class="form-control @error('major_id') is-invalid @enderror" value="{{ old('major_id') }}" required autocomplete="major_id" autofocus>
                                 <option><p>กรุณาเลือกสาขาที่ต้องการ</p></option>
-                                @foreach ($majors as $major)
+                                {{-- @foreach ($majors as $major)
 
                                         <option value="{{$major->id}}">{{$major->name}}</option>
 
-                                @endforeach
+                                @endforeach --}}
+                                <option value="1">สาขาครุศาสตร์อุตสาหกรรม</option>
+                                <option value="2">สาขาเทคโนโลยีอุตสาหกรรม</option>
+                                <option value="3">สาขาการบัญชี</option>
+                                <option value="4">สาขาการตลาด</option>
+                                <option value="5">สาขาการจัดการ</option>
+                                <option value="6">สาขาระบบสารสนเทศ</option>
+                                <option value="7">สาขาวิศวกรรมโยธา</option>
+                                <option value="8">สาขาวิศวกรรมไฟฟ้า</option>
+                                <option value="9">สาขาวิศวกรรมเครื่องกล</option>
+                                <option value="10">สาขาวิศวกรรมเครื่องกลเรือ</option>
+                                <option value="11">สาขาวิศวกรรมอุตสาหการ</option>
+                                <option value="12">สาขาวิศวกรรมคอมพิวเตอร์</option>
+                                <option value="13">สาขาภาษาต่างประเทศ</option>
+                                <option value="14">สาขาการโรงแรมและการท่องเที่ยว</option>
+                                <option value="15">สาขาคหกรรมศาสตร์</option>
+                                <option value="16">สาขาสถาปัตยกรรมและผังเมือง</option>
+                                <option value="17">สาขาศิลปกรรมและออกแบบ</option>
+                                <option value="18">สาขาอุตสาหกรรม</option>
+                                <option value="19">สาขาบริหารธุรกิจ</option>
                             </select>
 
 
